@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio informatique de Rayan">
+  <title>Rayan | Portfolio informatique</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #080e1a;
+      color: #e6edff;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 22px 8%;
+      border-bottom: 1px solid #243047;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #70a5ff;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav a:hover {
+      color: #70a5ff;
+    }
+
+    section {
+      padding: 65px 8%;
+    }
+
+    .hero {
+      min-height: 390px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 1.2;
+      margin: 12px 0;
+    }
+
+    .accent {
+      color: #70a5ff;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #b8c5dc;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #3978f6;
+      padding: 10px 18px;
+      border-radius: 9px;
+      margin: 5px 8px 5px 0;
+      font-weight: bold;
+    }
+
+    .button.secondary {
+      background: transparent;
+      border: 1px solid #70a5ff;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: #aab8d0;
+      margin-bottom: 25px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fit, minmax(min(100%, 230px), 1fr)
+      );
+      gap: 18px;
+    }
+
+    .card {
+      background: #101a2b;
+      border: 1px solid #293951;
+      border-radius: 14px;
+      padding: 22px;
+    }
+
+    .card h3 {
+      color: #8db6ff;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #b8c5dc;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #1b3151;
+      color: #a9ccff;
+      padding: 3px 9px;
+      margin: 10px 4px 0 0;
+      border-radius: 20px;
+      font-size: 0.8rem;
+    }
+
+    .contact {
+      text-align: center;
+      background: #101a2b;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #9caac2;
+      border-top: 1px solid #243047;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 12px;
+      }
+
+      section {
+        padding: 45px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a class="logo" href="#accueil">Rayan.dev</a>
+
+    <nav>
+      <a href="#accueil">Accueil</a>
+      <a href="#apropos">À propos</a>
+      <a href="#competences">Compétences</a>
+      <a href="#projets">Projets</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div>
+        <p class="accent">Étudiant en informatique</p>
+        <h1>Bonjour, je suis<br>
+          <span class="accent">Rayan</span>
+        </h1>
+
+        <p>
+          Passionné par l'informatique, la programmation,
+          les systèmes et les réseaux, je développe mes
+          compétences à travers mes études et mes projets.
+        </p>
+
+        <a class="button" href="#projets">Voir mes projets</a>
+        <a class="button secondary" href="#contact">Me contacter</a>
+      </div>
+    </section>
+
+    <section id="apropos">
+      <h2>À propos de moi</h2>
+      <p class="subtitle">
+        Mon parcours et mes objectifs dans l'informatique.
+      </p>
+      <div class="card">
+        Je suis étudiant en informatique et je souhaite
+        approfondir mes connaissances en programmation,
+        administration système et réseaux. Ce portfolio
+        me permet de présenter mes réalisations et de
+        progresser grâce à la pratique.
+      </div>
+    </section>
+
+    <section id="competences">
+      <h2>Mes compétences</h2>
+      <p class="subtitle">
+        Les technologies que j'apprends et que je pratique.
+      </p>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Programmation</h3>
+          <p>HTML, CSS, JavaScript, Python</p>
+        </article>
+
+        <article class="card">
+          <h3>Systèmes et réseaux</h3>
+          <p>Windows, Linux, TCP/IP, notions de réseau</p>
+        </article>
+
+        <article class="card">
+          <h3>Administration</h3>
+          <p>PowerShell, scripts et machines virtuelles</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projets">
+      <h2>Mes projets</h2>
+      <p class="subtitle">
+        Quelques réalisations à découvrir.
+      </p>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Scripts PowerShell</h3>
+          <p>
+            Exercices d'automatisation et scripts utilisant
+            des variables, des conditions et des boucles.
+          </p>
+          <span class="tag">PowerShell</span>
+          <span class="tag">Windows</span>
+        </article>
+
+        <article class="card">
+          <h3>Mon portfolio</h3>
+          <p>
+            Création de mon site personnel avec une mise
+            en page responsive.
+          </p>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+        </article>
+
+        <article class="card">
+          <h3>Projet à venir</h3>
+          <p>
+            Cet espace accueillera mes prochaines
+            réalisations informatiques.
+          </p>
+          <span class="tag">En apprentissage</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Me contacter</h2>
+      <p class="subtitle">
+        Une opportunité ou une question ?
+        Tu peux me contacter par e-mail.
+      </p>
+      <!-- Remplace cette adresse par ton e-mail professionnel -->
+      <a class="button"
+         href="mailto:ton-adresse@email.com">
+        M'envoyer un e-mail
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Rayan — Portfolio informatique</p>
+    <p>Apprendre · Créer · Progresser</p>
+  </footer>
+</body>
+</html>
